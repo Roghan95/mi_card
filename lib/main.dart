@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,13 +18,22 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            margin: const EdgeInsets.only(left: 30.0),
-            padding: const EdgeInsets.all(20.0),
-            color: Colors.white,
-            child: const Text('Hello'),
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/profil.jpg'),
+              ),
+              Text(
+                'Baisangour',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40.0,
+                  color: Colors.white,
+                ),
+              ),
+            ],
           ),
         ),
       ),
